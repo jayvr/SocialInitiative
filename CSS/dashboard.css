@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+header {
+    position: sticky;
+    top: 0%;
+    display: block;
+    font-variant: small-caps;
+    font-style: italic;
+    font-size: 2em;
+    color: rgb(92, 92, 92);
+    background-color: #2ecc71;
+    padding: 20px;
+    margin: auto;
+}
+
+/* Style the navigation menu */
+.navbar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+/* Navigation links */
+.navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 25%;
+    /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+    text-align: center;
+    /* If you want the text to be centered */
+}
+
+/* Add a background color on mouse-over */
+.navbar a:hover {
+    background-color: #000;
+}
+
+/* Style the current/active link */
+.navbar a.active {
+    background-color: #2ecc71;
+}
+
+/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+@media screen and (max-width: 550px) {
+    .navbar a {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: left;
+        /* If you want the text to be left-aligned on small screens */
+    }
+}
