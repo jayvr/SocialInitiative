@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans";
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background-image: linear-gradient(
+    100deg,
+    rgb(200, 250, 213),
+    rgb(222, 255, 213)
+  );
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  padding: 1rem;
+  background-color: greenyellow;
+  display: grid;
+  grid-template-columns: 75% auto;
+  font-size: 1.5rem;
+  vertical-align: middle;
+  border: rgb(88, 88, 88) 1px solid;
+}
+
+nav ul {
+  font-size: 1rem;
+  display: grid;
+  vertical-align: middle;
+  grid-template-columns: auto auto auto;
+  list-style: none;
+}
+
+/* Add a background color on mouse-over */
+nav a:hover {
+  color: #fefefe;
+}
+
+/* Style the current/active link */
+nav a.active {
+  color: #000;
+}
+
+.active {
+  color: black;
+  text-decoration: underline;
+}
+.hidden {
+  display: hidden;
+}
+
+footer ul {
+  background-color: grey;
+  color: white;
+  padding: 1.2rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 75% auto;
+  list-style: none;
+}
+
+/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+@media screen and (max-width: 550px) {
+  nav a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    /* If you want the text to be left-aligned on small screens */
+  }
+}

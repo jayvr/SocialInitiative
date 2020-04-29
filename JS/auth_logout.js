@@ -5,5 +5,5 @@ logout.addEventListener("click", (e) => {
         console.log("logging out!!!");
         window.location.href = "index.html"
     })
-    
+
 });
