@@ -5,20 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/sign.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <title>Social Initiative</title>
 </head>
 
 <body>
-    <header>
-        SOCIAL INITIATIVE
-    </header>
-    <div class="navbar">
-        <a href="dashboard.html">Dashboard</a>
-        <a href="newActivity.html">Make Activity</a>
-        <a class="active" href="login.html">Login</a>
-        <a href="register.html">Sign up</a>
-        <a href="logout.html" id="logout">Logout</a>
+    <div class="header">
+        <header><a href="#">Social Initiative</a></header>
+        <nav>
+            <ul>
+                <li class="home active"><a href="dashboard.html">Home</a></li>
+                <li class="make"><a href="newActivity.html">Make</a></li>
+                <li class="login"><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
     </div>
 
 
@@ -41,6 +42,12 @@
         </div>
     </div>
 
+    <footer>
+        <ul>
+            <li class="copy">copyright &copy;</li>
+            <li class="aboutUs"><a href="#">About Us</a></li>
+        </ul>
+    </footer>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
 
