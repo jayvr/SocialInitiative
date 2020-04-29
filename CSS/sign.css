@@ -1,145 +1,90 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans';
-    box-sizing: border-box;
-}
-
-body,
-html {
-    height: 100%;
-}
-
-header {
-    display: block;
-    font-variant: small-caps;
-    font-style: italic;
-    font-size: 2em;
-    color: rgb(92, 92, 92);
-    background-color: #2ecc71;
-    padding: 20px;
-    margin: auto;
-}
-
 .container {
-    padding: 16px;
-    white-space: nowrap;
-    border: 5px solid #2ecc71;
+  padding: 16px;
+  white-space: nowrap;
+  border: 5px solid #2ecc71;
 }
 
 label {
-    display: block;
-    margin: 0;
-    font-weight: bold;
+  display: block;
+  margin: 0;
+  font-weight: bold;
 }
 
 /* Full-width inputs */
-input[type=text],
-input[type=password],
-input[type=email] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
 input:hover {
-    background-color: #eee;
-    outline: none;
-
+  background-color: #eee;
+  outline: none;
 }
 
 input:focus {
-    background-color: white;
-    outline: none;
+  background-color: white;
+  outline: none;
 }
 
-input[type=button] {
-    background-color: #2ecc71;
-    color: rgb(92, 92, 92);
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+input[type="button"] {
+  background-color: #2ecc71;
+  color: rgb(92, 92, 92);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 }
 
-input[type=button]:hover {
-    cursor: pointer;
-    background-color: #2ecc80;
-}
-
-/* Style the navigation menu */
-.navbar {
-    width: 100%;
-    background-color: #555;
-    overflow: auto;
-}
-
-/* Navigation links */
-.navbar a {
-    float: left;
-    padding: 12px;
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    width: 25%;
-    /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
-    text-align: center;
-    /* If you want the text to be centered */
-}
-
-/* Add a background color on mouse-over */
-.navbar a:hover {
-    background-color: #000;
-}
-
-/* Style the current/active link */
-.navbar a.active {
-    background-color: #2ecc71;
+input[type="button"]:hover {
+  cursor: pointer;
+  background-color: #2ecc80;
 }
 
 /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
 @media screen and (max-width: 550px) {
-    .navbar a {
-        float: none;
-        display: block;
-        width: 100%;
-        text-align: left;
-        /* If you want the text to be left-aligned on small screens */
-    }
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    /* If you want the text to be left-aligned on small screens */
+  }
 }
-
-/*
+/* 
 @media screen and (min-width: 550px) {
-    .container {
-        display: block;
-        width: 80%;
-        float: none;
-        margin: 25%;
-        border: 5px #2ecc71 solid;
-    }
+  .container {
+    display: block;
+    width: 80%;
+    float: none;
+    margin: 25%;
+    border: 5px #2ecc71 solid;
+  }
 }
 
 @media screen and (min-width: 1025px) {
-    .container {
-        display: block;
-        width: 100%;
-        float: none;
-        border-top: 100px #2ecc71 solid;
-        border: 150px #2ecc71 solid;
-    }
+  .container {
+    display: block;
+    width: 100%;
+    float: none;
+    border-top: 100px #2ecc71 solid;
+    border: 150px #2ecc71 solid;
+  }
 }
 
 @media screen and (min-width: 1025px) {
-    .container {
-        display: block;
-        width: 100%;
-        float: none;
-        border-top: 100px #2ecc71 solid;
-        border-left: 400px #2ecc71 solid;
-        border-right: 400px #2ecc71 solid;
-    }
-}*/
+  .container {
+    display: block;
+    width: 100%;
+    float: none;
+    border-top: 100px #2ecc71 solid;
+    border-left: 400px #2ecc71 solid;
+    border-right: 400px #2ecc71 solid;
+  }
+} */
