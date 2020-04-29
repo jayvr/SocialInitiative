@@ -20,38 +20,38 @@
         <a href="register.html">Sign up</a>
         <a class="active" href="logout.html" id="logout">Logout</a>
     </div>
-       <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
 
-<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCtuX5nKRRieUu-gjr5KEVBIv5-yXRDUcM",
-    authDomain: "socialinitiative-aa3a0.firebaseapp.com",
-    databaseURL: "https://socialinitiative-aa3a0.firebaseio.com",
-    projectId: "socialinitiative-aa3a0",
-    storageBucket: "socialinitiative-aa3a0.appspot.com",
-    messagingSenderId: "970928577470",
-    appId: "1:970928577470:web:edd912524faf8b714bf7ef",
-    measurementId: "G-8L20B086CR"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCtuX5nKRRieUu-gjr5KEVBIv5-yXRDUcM",
+            authDomain: "socialinitiative-aa3a0.firebaseapp.com",
+            databaseURL: "https://socialinitiative-aa3a0.firebaseio.com",
+            projectId: "socialinitiative-aa3a0",
+            storageBucket: "socialinitiative-aa3a0.appspot.com",
+            messagingSenderId: "970928577470",
+            appId: "1:970928577470:web:edd912524faf8b714bf7ef",
+            measurementId: "G-8L20B086CR"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
 
-  //make auth and firestore reference
-  const auth = firebase.auth();
-  const db = firebase.firestore();
+        //make auth and firestore reference
+        const auth = firebase.auth();
+        const db = firebase.firestore();
 
   // update firestore settings
  // db.settings({ timestampsInSnapshots : true });
-</script>
-    <script src="auth_logout.js"></script>
+    </script>
+    <script src="JS/auth_logout.js"></script>
 </body>

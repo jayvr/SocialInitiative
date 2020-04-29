@@ -4,5 +4,5 @@ logout.addEventListener("click", (e) => {
     auth.signOut().then(() => {
         console.log("logging out!!!");
     })
-    
+
 });
