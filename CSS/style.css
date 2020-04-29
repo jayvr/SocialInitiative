@@ -20,7 +20,7 @@ a {
 
 .header {
   padding: 1rem;
-  background-color: greenyellow;
+  background-color: #2ecc71;
   display: grid;
   grid-template-columns: 75% auto;
   font-size: 1.5rem;
@@ -28,6 +28,9 @@ a {
   border: rgb(88, 88, 88) 1px solid;
 }
 
+header > a {
+  color: black;
+}
 nav ul {
   font-size: 1rem;
   display: grid;
@@ -54,6 +57,9 @@ nav a.active {
   display: hidden;
 }
 
+footer a {
+  color: white;
+}
 footer ul {
   background-color: grey;
   color: white;
@@ -69,11 +75,4 @@ footer ul {
 
 /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
 @media screen and (max-width: 550px) {
-  nav a {
-    float: none;
-    display: block;
-    width: 100%;
-    text-align: left;
-    /* If you want the text to be left-aligned on small screens */
-  }
 }

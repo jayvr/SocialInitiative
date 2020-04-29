@@ -21,6 +21,11 @@ label,
 .oops {
   font-weight: normal;
 }
+
+.oops a {
+  text-decoration: underline;
+}
+
 /* Full-width inputs */
 input[type="text"],
 input[type="password"],
