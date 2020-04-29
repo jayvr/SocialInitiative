@@ -1,3 +1,7 @@
+:root {
+  --width: 50%;
+}
+
 .container {
   padding: 16px;
   white-space: nowrap;
@@ -10,7 +14,7 @@ label,
 .oops {
   display: block;
   margin: auto;
-  width: 80%;
+  width: var(--width);
   font-weight: bold;
 }
 
@@ -21,7 +25,7 @@ label,
 input[type="text"],
 input[type="password"],
 input[type="email"] {
-  width: 80%;
+  width: var(--width);
   padding: 12px 20px;
   margin: 8px auto;
   display: block;
@@ -46,7 +50,7 @@ input[type="button"] {
   margin: auto;
   border: none;
   cursor: pointer;
-  width: 80%;
+  width: var(--width);
   display: block;
 }
 
@@ -57,7 +61,7 @@ input[type="button"]:hover {
 
 /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
 @media screen and (max-width: 550px) {
-  .navbar a {
+  nav a {
     float: none;
     display: block;
     width: 100%;
