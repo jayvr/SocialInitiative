@@ -1,3 +1,7 @@
+auth.onAuthStateChanged(user => {
+    console.log(user);
+});
+
 const logout = document.querySelector('#logout');
 //console.log(logout);
 logout.addEventListener("click", (e) => {

@@ -1,3 +1,7 @@
+auth.onAuthStateChanged(user => {
+    console.log(user);
+});
+
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const login_btn = document.querySelector("#login_btn");
