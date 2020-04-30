@@ -10,6 +10,16 @@
   margin-top: 50px;
 }
 
+#content-head {
+  display: block;
+  margin: auto;
+  width: var(--width);
+  font-weight: bold;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 3rem;
+}
+
 label,
 .oops {
   display: block;
@@ -29,7 +39,8 @@ label,
 /* Full-width inputs */
 input[type="text"],
 input[type="password"],
-input[type="email"] {
+input[type="email"],
+textarea {
   width: var(--width);
   padding: 12px 20px;
   margin: 8px auto;
@@ -38,16 +49,22 @@ input[type="email"] {
   box-sizing: border-box;
 }
 
-input:hover {
+input:hover,
+textarea:hover {
   background-color: #eee;
   outline: none;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   background-color: white;
   outline: none;
+  border: solid 0.5px black;
 }
 
+textarea {
+  height: 15rem;
+}
 input[type="button"] {
   background-color: #2ecc71;
   color: rgb(92, 92, 92);
