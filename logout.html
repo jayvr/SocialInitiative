@@ -22,7 +22,7 @@
         </nav>
     </div>
     <div style="vertical-align: middle;">
-        <input type="button" value="Log out">
+        <input type="button" value="Log out" id="logout">
     </div>
     <footer>
         <ul>
@@ -50,7 +50,7 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
+       // firebase.analytics();
 
         //make auth and firestore reference
         const auth = firebase.auth();
