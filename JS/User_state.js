@@ -1,7 +1,8 @@
 let loged_user;
+let STATUS;
 auth.onAuthStateChanged(user => {
     if (user) {
-    const STATUS = true;
+    STATUS = true;
     console.log("User Logged in!!!!");
     loged_user = user;
     }
