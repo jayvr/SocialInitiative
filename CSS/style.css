@@ -56,13 +56,13 @@ nav a.active {
 .hidden {
   display: hidden;
 }
-/* 
-ul {
+
+#item-list ul {
   list-style-type: none;
   padding: 0;
 }
-
-li {
+/* 
+#item-list li {
   padding: 20px;
   background: #f6f6f6;
   font-size: 20px;
@@ -72,32 +72,30 @@ li {
   height: 46px;
 } */
 
-/* li:nth-child(even) {
+#item-list li {
   padding: 20px;
   background: #f2f2f2;
-} */
-/* 
-li span {
+}
+#item-list li span {
   display: block;
 }
 
-li span:nth-child(2) {
+#item-list li span:nth-child(2) {
   font-size: 16px;
   margin-top: 6px;
   color: #999;
-} */
-/* 
-li div {
-  position: absolute;
-  top: 0;
-  right: 0px;
+}
+#item-list li div {
+  /* position: absolute; */
+  /* top: 0; */
+  /* right: 0px; */
   background: rgba(255, 255, 255, 0.6);
-  width: 40px;
+  /* width: 40px; */
   text-align: center;
   padding: 10px 0;
   font-weight: bold;
   cursor: pointer;
-} */
+}
 
 footer a {
   color: white;
