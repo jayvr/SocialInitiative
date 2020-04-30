@@ -1,6 +1,6 @@
 auth.onAuthStateChanged(user => {
     if (user) {
-    const STATUS = True;
+    const STATUS = true;
     }
     else {
         console.log("user logged out!!!")
