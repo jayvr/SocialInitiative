@@ -1,5 +1,10 @@
 auth.onAuthStateChanged(user => {
-    console.log(user);
+    if (user) {
+    console.log("User logged in : ",user);
+    }
+    else {
+        console.log("user logged out!!!")
+    }
 });
 
 const nav = document.querySelector("#nav")
