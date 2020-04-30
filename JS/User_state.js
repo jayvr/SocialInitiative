@@ -1,8 +1,11 @@
 auth.onAuthStateChanged(user => {
     if (user) {
-        const STATUS = true;
+    const STATUS = true;
+    console.log("User Logged in!!!!");
+    const Loged_user = user;
     }
     else {
-        console.log("user logged out!!!")
+        const STATUS = false;
+        console.log("User Logged out!!!!");
     }
 });
