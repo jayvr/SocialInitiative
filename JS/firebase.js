@@ -8,13 +8,13 @@ function addList(doc) {
     let li = document.createElement("li")
     let title = document.createElement("div")
     let desc = document.createElement("span")
-    let time = document.createElement("span")
+    // let time = document.createElement("span")
     let author = document.createElement("span")
 
     li.setAttribute("doc-id", doc.id)
     title.textContent = doc.data().title
     desc.textContent = doc.data().description
-    time.textContent = doc.data().time
+    // time.textContent = doc.data().time
     let id = doc.data().author.id
     // author.textContent = id
     console.log(id)
@@ -27,7 +27,7 @@ function addList(doc) {
     li.appendChild(title);
     li.appendChild(author);
     li.appendChild(desc);
-    li.appendChild(time);
+    // li.appendChild(time);
 
     itm_lst.appendChild(li);
 

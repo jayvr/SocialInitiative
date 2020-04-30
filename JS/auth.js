@@ -1,17 +1,27 @@
 
-
-const uname = document.querySelector('#email');
+const uname = document.querySelector('#u-name');
+const uemail = document.querySelector('#email');
 const pwd = document.querySelector('#password');
 const sgn_btn = document.querySelector('#sign-up');
 //console.log(sgn_btn)
 sgn_btn.addEventListener("click", (e) => {
-    const email = uname.value;
+    const email = uemail.value;
     const password = pwd.value;
-    // console.log(email,password);
+    const name = uname.value;
 
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
-        console.log(cred.user);
-        window.location.href = "dashboard.html";
+        cred.user.updateProfile({
+            displayName: name
+        }).then(() => {
+            console.log(cred.user);
+        })
     })
+
+    db.collection("users").add({
+        name: name,
+        email: email,
+    })
+
+    // window.location.href = "dashboard.html";
 });
 
