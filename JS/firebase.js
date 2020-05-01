@@ -1,24 +1,32 @@
-const itm_lst = document.querySelector("#item-list")
+const itm_lst = document.querySelector(".container")
 
 let user = db.collection("users")
 let act = db.collection("activity")
 
 // list an activity detail in document
 function addList(doc) {
-    let li = document.createElement("li")
-    let title = document.createElement("div")
-    let desc = document.createElement("span")
+    let li = document.createElement("div")
+    let dv = document.createElement("div")
+    let title = document.createElement("span")
     let author = document.createElement("span")
+    let desc = document.createElement("div")
 
     li.setAttribute("doc-id", doc.id)
+    li.setAttribute("class", "list")
     title.textContent = doc.data().title
+    title.setAttribute("class", "list-title")
     desc.textContent = doc.data().description
-    author.textContent = doc.data().author_name
+    desc.setAttribute("class", "list-desc")
+    author.textContent = "-" + doc.data().author_name
+    author.setAttribute("class", "list-author")
 
-
-    li.appendChild(title);
+    dv.setAttribute("class", "ttl-usr")
+    dv.appendChild(title)
+    dv.appendChild(author)
+    // li.appendChild(title);
+    // li.appendChild(author);
+    li.appendChild(dv);
     li.appendChild(desc);
-    li.appendChild(author);
 
     if (STATUS) {
         btn = document.createElement("input")

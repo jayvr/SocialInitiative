@@ -62,50 +62,50 @@ nav a.active {
   display: hidden;
 }
 
-/*#item-list ul {
-  list-style-type: none;
-  padding: 0;
-  /* padding-bottom: 100px; */
-/*  position: relative;
-}*/
-/* 
-#item-list li {
-  padding: 20px;
-  background: #f6f6f6;
-  font-size: 20px;
-  color: #555;
-  position: relative;
-  border-bottom: 1px solid #e6e6e6;
-  height: 46px;
-} */
-/*
-#item-list li {
-  padding: 20px;
-  /* padding-bottom: 100px; */
-/*  background: #f2f2f2;
+.container {
+  padding: 0.5rem;
+  margin: auto;
+  width: 85%;
 }
-#item-list li span {
+
+.list {
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: white;
+}
+
+.list .ttl-usr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ttl-usr .list-author {
+  color: darkgrey;
+  padding: 5px;
+}
+
+.ttl-usr .list-title {
+  font-weight: bold;
+  padding: 5px;
+}
+
+.list-desc {
+  color: blue;
+  padding: 5px;
+  margin: 2px;
+}
+
+input[type="button"] {
+  background-color: #2ecc71;
+  color: rgb(92, 92, 92);
+  padding: 5px 50px;
+  margin-left: auto;
+  margin-right: 2px;
+  border: none;
+  cursor: pointer;
+  width: var(--width);
   display: block;
 }
-#item-list li:last-child {
-  padding-bottom: 100px;
-}
-#item-list li span:nth-child(2) {
-  font-size: 16px;
-  margin-top: 6px;
-  color: #999;
-}
-#item-list li div {
-  /* position: absolute; */
-/* top: 0; */
-/* right: 0px; */
-/* background: rgba(255, 255, 255, 0.6);
-  /* width: 40px; */
-/*  text-align: center;
-  padding: 10px 0;
-  font-weight: bold;
-  cursor: pointer;
-}*/
 
 /* footer css from here */
 footer a {
