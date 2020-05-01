@@ -87,7 +87,6 @@ nav a.active {
 #item-list li span {
   display: block;
 }
-
 #item-list li:last-child {
   padding-bottom: 100px;
 }
