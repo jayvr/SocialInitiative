@@ -98,9 +98,9 @@ nav a.active {
 }
 #item-list li div {
   /* position: absolute; */
-  /* top: 0; */
-  /* right: 0px; */
- /* background: rgba(255, 255, 255, 0.6);
+/* top: 0; */
+/* right: 0px; */
+/* background: rgba(255, 255, 255, 0.6);
   /* width: 40px; */
 /*  text-align: center;
   padding: 10px 0;
@@ -121,7 +121,7 @@ footer ul {
   right: 0;
   left: 0; */
   display: grid;
-  grid-template-columns: 85% auto auto;
+  grid-template-columns: 75% auto auto auto;
   list-style: none;
 }
 footer {

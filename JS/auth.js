@@ -16,14 +16,13 @@ sgn_btn.addEventListener("click", (e) => {
             console.log(cred.user);
         })
     }).then(() => {
-        window.location.href = "dashboard.html"; 
+        window.location.href = "index.html";
 
-    db.collection("users").add({
-        name: name,
-        email: email,
-    })
+        db.collection("users").add({
+            name: name,
+            email: email,
+        })
     })
 
-    // window.location.href = "dashboard.html";
 });
 
