@@ -36,6 +36,7 @@ auth.onAuthStateChanged(cur_user => {
                     })
                 });
             })
+            window.location.href = "index.html"
         })
 
     }
