@@ -62,7 +62,7 @@ nav a.active {
   display: hidden;
 }
 
-.container {
+.item-list {
   padding: 0.5rem;
   margin: auto;
   width: 85%;

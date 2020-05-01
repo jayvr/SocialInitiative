@@ -1,4 +1,4 @@
-const itm_lst = document.querySelector(".container")
+const itm_lst = document.querySelector(".item-list")
 
 let user = db.collection("users")
 let act = db.collection("activity")
