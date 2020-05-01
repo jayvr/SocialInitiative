@@ -9,25 +9,16 @@ function addList(doc) {
     let title = document.createElement("div")
     let desc = document.createElement("span")
     let author = document.createElement("span")
-    // let time = document.createElement("span")
 
     li.setAttribute("doc-id", doc.id)
     title.textContent = doc.data().title
     desc.textContent = doc.data().description
     author.textContent = doc.data().author_name
-    // time.textContent = doc.data().time
-    // let id = doc.data().author.id
-    // console.log(id)
-    // user.doc(id).get().then((dok) => {
-    //     console.log(dok.data().name)
-    //     author.textContent = dok.data().name
 
-    // })
 
     li.appendChild(title);
-    li.appendChild(author);
     li.appendChild(desc);
-    // li.appendChild(time);
+    li.appendChild(author);
 
     if (STATUS) {
         btn = document.createElement("input")
