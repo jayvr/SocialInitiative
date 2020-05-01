@@ -26,6 +26,8 @@ a {
   font-size: 1.5rem;
   vertical-align: middle;
   border: rgb(88, 88, 88) 1px solid;
+  position: sticky;
+  top: 0;
 }
 
 header > a {
@@ -49,10 +51,13 @@ nav a.active {
   color: #000;
 }
 
+/* style for active home page link */
 .active {
   color: black;
   text-decoration: underline;
 }
+
+/* to makae any element hidden */
 .hidden {
   display: hidden;
 }
@@ -60,6 +65,8 @@ nav a.active {
 #item-list ul {
   list-style-type: none;
   padding: 0;
+  /* padding-bottom: 100px; */
+  position: relative;
 }
 /* 
 #item-list li {
@@ -74,12 +81,16 @@ nav a.active {
 
 #item-list li {
   padding: 20px;
+  /* padding-bottom: 100px; */
   background: #f2f2f2;
 }
 #item-list li span {
   display: block;
 }
 
+#item-list li:last-child {
+  padding-bottom: 100px;
+}
 #item-list li span:nth-child(2) {
   font-size: 16px;
   margin-top: 6px;
@@ -97,6 +108,7 @@ nav a.active {
   cursor: pointer;
 }
 
+/* footer css from here */
 footer a {
   color: white;
 }
@@ -104,15 +116,20 @@ footer ul {
   background-color: grey;
   color: white;
   padding: 1.2rem;
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
   right: 0;
-  left: 0;
+  left: 0; */
   display: grid;
-  grid-template-columns: 75% auto;
+  grid-template-columns: 85% auto auto;
   list-style: none;
 }
-
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
 @media screen and (max-width: 550px) {
 }

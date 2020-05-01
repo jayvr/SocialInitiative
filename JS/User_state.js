@@ -5,7 +5,7 @@ auth.onAuthStateChanged(user => {
         console.log("User Logged in!!!!");
     }
     else {
-        const STATUS = false;
+        STATUS = false;
         console.log("User Logged out!!!!");
     }
 });

@@ -4,12 +4,6 @@ const makebtn = document.querySelector("#make-it")
 
 let act = db.collection("activity")
 let user = db.collection("users")
-// let cur_user;
-// // usermail = usermail.email;
-// setTimeout(() => {
-//     cur_user = firebase.auth().currentUser
-//     console.log(cur_user)
-// }, 2000);
 
 auth.onAuthStateChanged(cur_user => {
     if (cur_user) {
@@ -17,6 +11,7 @@ auth.onAuthStateChanged(cur_user => {
 
 
         makebtn.addEventListener("click", () => {
+            console.log("wait...")
             user.where("email", "==", cur_user.email).where("name", "==", cur_user.displayName).get().then(snap => {
                 snap.forEach(doc => {
                     auth_doc = "/users/" + doc.id
@@ -24,6 +19,7 @@ auth.onAuthStateChanged(cur_user => {
                         title: title.value,
                         description: desc.value,
                         author: auth_doc,
+                        author_name: cur_user.displayName,
                     }).then((actRef) => {
                         console.log("sucessfully written")
                         act_doc = "/activity/" + actRef.id
