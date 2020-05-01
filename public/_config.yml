@@ -1,1 +1,3 @@
 theme: jekyll-theme-hacker
+- name: Deploy to Firebase
+  uses: lowply/deploy-firebase@v0.0.2
