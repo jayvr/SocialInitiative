@@ -43,7 +43,9 @@ nav ul {
 
 /* Add a background color on mouse-over */
 nav a:hover {
-  color: #fefefe;
+  color: yellow;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
 }
 
 /* Style the current/active link */
@@ -53,8 +55,10 @@ nav a.active {
 
 /* style for active home page link */
 .active {
-  color: black;
+  color: yellowgreen;
   text-decoration: underline;
+  transform: scale(1.25);
+  font-weight: bold;
 }
 
 /* to makae any element hidden */
@@ -72,6 +76,20 @@ nav a.active {
   padding: 1rem;
   margin: 0.5rem;
   background-color: white;
+}
+
+.list:hover {
+  transform: scale(1.009);
+  transition: all 0.05s ease-in-out;
+  background-color: rgb(215, 250, 225);
+}
+
+.list:nth-child(even) {
+  background-color: rgb(230, 230, 230);
+}
+
+.list:nth-child(even):hover {
+  background-color: rgb(215, 250, 225);
 }
 
 .list .ttl-usr {
