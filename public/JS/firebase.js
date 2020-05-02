@@ -47,5 +47,6 @@ act.get().then(snap => {
     snap.docs.forEach(doc => {
         addList(doc)
     })
+    console.log("done..")
 })
 

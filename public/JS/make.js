@@ -22,7 +22,7 @@ auth.onAuthStateChanged(cur_user => {
                 author_name: cur_user.displayName,
             }).then((actRef) => {
                 console.log("sucessfuly updated in activity collection")
-                // console.log("activity id = " + actRef.id)
+
                 // id of activity
                 act_doc = "/activity/" + actRef.id
                 // update user field to connect activity (add id in array)
@@ -33,7 +33,7 @@ auth.onAuthStateChanged(cur_user => {
                 }).then(() => {
                     console.log("sucessfully updated array in user")
                 }).catch(() => {
-                    "error in updating array in user"
+                    console.log("error in updating array in user")
                 })
             }).catch(() => {
                 console.log("error in adding new activity")
