@@ -1,11 +1,20 @@
-let btn = document.querySelector()
-auth.onAuthStateChanged(user => {
-    if(user)
-    {
+function onEnroll(btn)
+{
+    auth.onAuthStateChanged(user => {
+        console.log(btn.id);
+        console.log(user.uid);
+        enrl_doc = "/activity/" + btn.id;
+        if (user)
+        {
+           var userref = db.collection("users").doc(user.uid);
+           userref.update({
+               enrolled : firebase.firestore.FieldValue.arrayUnion(enrl_doc)
+           });
 
-    }
-    else
-    {
-        console.log("Please login to see enrolled activities!!!!");
-    }
-})
+        }
+        else
+        {
+            console.log("Please login to Enter!!");
+        }
+    })
+}
