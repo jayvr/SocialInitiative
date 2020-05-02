@@ -36,6 +36,7 @@ function addList(doc) {
         btn.setAttribute("type", "button")
         btn.setAttribute("id", doc.id)
         btn.setAttribute("value", "Enroll")
+        btn.setAttribute("onclick", "onEnroll(this)")
         li.appendChild(btn)
     }
 
