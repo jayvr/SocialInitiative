@@ -10,17 +10,18 @@ sgn_btn.addEventListener("click", (e) => {
     const name = uname.value;
 
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
+        userID = cred.user.uid;
         cred.user.updateProfile({
             displayName: name
         }).then(() => {
             console.log(cred.user);
         })
     }).then(() => {
-        window.location.href = "index.html";
-
-        db.collection("users").add({
+        db.collection("users").doc(userID).set({
             name: name,
             email: email,
+        }).then(() => {
+            window.location.href = "index.html";
         })
     })
 
