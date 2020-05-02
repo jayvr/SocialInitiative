@@ -34,6 +34,7 @@ function addList(doc) {
     if (STATUS) {
         const btn = document.createElement("input")
         btn.setAttribute("type", "button")
+        btn.setAttribute("id", doc.id)
         btn.setAttribute("value", "Enroll")
         li.appendChild(btn)
     }
