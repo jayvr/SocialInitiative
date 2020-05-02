@@ -1,46 +1,49 @@
 const itm_lst = document.querySelector(".item-list")
 
-let user = db.collection("users")
-let act = db.collection("activity")
+const user = db.collection("users")
+const act = db.collection("activity")
 
 // list an activity detail in document
 function addList(doc) {
-    let li = document.createElement("div")
-    let dv = document.createElement("div")
-    let title = document.createElement("span")
-    let author = document.createElement("span")
-    let desc = document.createElement("div")
+    const li = document.createElement("div")
+    const dv = document.createElement("div")
+    const title = document.createElement("span")
+    const author = document.createElement("span")
+    const desc = document.createElement("div")
+
 
     li.setAttribute("doc-id", doc.id)
     li.setAttribute("class", "list")
+
     title.textContent = doc.data().title
     title.setAttribute("class", "list-title")
+
     desc.textContent = doc.data().description
     desc.setAttribute("class", "list-desc")
+
     author.textContent = "-" + doc.data().author_name
     author.setAttribute("class", "list-author")
 
     dv.setAttribute("class", "ttl-usr")
     dv.appendChild(title)
     dv.appendChild(author)
-    // li.appendChild(title);
-    // li.appendChild(author);
-    li.appendChild(dv);
-    li.appendChild(desc);
+    li.appendChild(dv)
+    li.appendChild(desc)
 
+    // enroll button only if user is logged in
     if (STATUS) {
-        btn = document.createElement("input")
+        const btn = document.createElement("input")
         btn.setAttribute("type", "button")
         btn.setAttribute("value", "Enroll")
         li.appendChild(btn)
     }
 
-    itm_lst.appendChild(li);
-
+    itm_lst.appendChild(li)
 }
 
 // getting activities from firestore
 act.get().then(snap => {
+    console.log("fetching activities..")
     snap.docs.forEach(doc => {
         addList(doc)
     })

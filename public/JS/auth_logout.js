@@ -1,11 +1,10 @@
+const logout = document.querySelector('#logout')
 
-
-const logout = document.querySelector('#logout');
-//console.log(logout);
 logout.addEventListener("click", (e) => {
+    console.log("logging out!!!")
+
+    // logging out of account
     auth.signOut().then(() => {
-        console.log("logging out!!!");
         window.location.href = "index.html"
     })
-
-});
+})

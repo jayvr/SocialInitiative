@@ -1,14 +1,15 @@
+const email = document.querySelector("#email")
+const password = document.querySelector("#password")
+const login_btn = document.querySelector("#login_btn")
 
-
-const email = document.querySelector("#email");
-const password = document.querySelector("#password");
-const login_btn = document.querySelector("#login_btn");
 login_btn.addEventListener("click", (e) => {
-    const em = email.value;
-    const pass = password.value;
-    console.log(em, pass);
+    const em = email.value
+    const pass = password.value
+
+    console.log("logging in...")
+
+    // login for user
     auth.signInWithEmailAndPassword(em, pass).then(cred => {
-        console.log(cred.user);
-        window.location.href = "index.html";
+        window.location.href = "index.html"
     })
 })

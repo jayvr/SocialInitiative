@@ -1,11 +1,11 @@
-let STATUS;
+let STATUS
 auth.onAuthStateChanged(user => {
     if (user) {
-        STATUS = true;
-        console.log("User Logged in!!!!");
+        STATUS = true
+        console.log("User Logged in!!!!")
     }
     else {
-        STATUS = false;
-        console.log("User Logged out!!!!");
+        STATUS = false
+        console.log("User Logged out!!!!")
     }
 });
