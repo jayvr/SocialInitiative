@@ -47,6 +47,7 @@ function addList(doc) {
 act.get().then(snap => {
     console.log("fetching activities..")
     snap.docs.forEach(doc => {
+        console.log(doc.data())
         addList(doc)
     })
     console.log("done..")
@@ -58,7 +59,7 @@ function onEnroll(btn)
     auth.onAuthStateChanged(user => {
         console.log(btn.id);
         console.log(user.uid);
-        enrl_doc = "/activity/" + btn.id;
+        enrl_doc = btn.id;
         if (user)
         {
            var userref = db.collection("users").doc(user.uid);

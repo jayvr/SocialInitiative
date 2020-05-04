@@ -1,14 +1,32 @@
 auth.onAuthStateChanged(user => {
     if (user) {
-        console.log("User Logged in!!!!")
-        const u = db.collection("users").where("email","==",user.email)
-        u.get().then(snap => {
-            console.log(snap)
-        })
-        
-        
-
-            
+        console.log("User Logged in!!!!");
+        const uid = user.uid;
+        console.log(user.uid);
+        var actref = db.collection("activity");
+        var userref = db.collection("users").doc(uid);
+        userref.get().then(function (doc) {
+            if(doc.exists)
+            {
+                doc.data().enrolled.forEach(element => {
+                    console.log(element);
+                    actref.doc(element).get().then(function (page) {
+                        if(page.exists)
+                        {
+                            enrollList(page);
+                        }
+                        else{
+                            console.log("No act!!!");
+                        }
+                    })
+                });
+            }
+            else{
+                console.log("No such doc!!!");
+            }
+        }).catch(function(error) {
+            console.log("Error getting document:", error);
+        });        
     }
     else {
         console.log("User Logged out!!!!")
