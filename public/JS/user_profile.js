@@ -1,37 +1,3 @@
-auth.onAuthStateChanged(user => {
-    if (user) {
-        console.log("User Logged in!!!!");
-        const uid = user.uid;
-        console.log(user.uid);
-        var actref = db.collection("activity");
-        var userref = db.collection("users").doc(uid);
-        userref.get().then(function (doc) {
-            if(doc.exists)
-            {
-                doc.data().enrolled.forEach(element => {
-                    console.log(element);
-                    actref.doc(element).get().then(function (page) {
-                        if(page.exists)
-                        {
-                            enrollList(page);
-                        }
-                        else{
-                            console.log("No act!!!");
-                        }
-                    })
-                });
-            }
-            else{
-                console.log("No such doc!!!");
-            }
-        }).catch(function(error) {
-            console.log("Error getting document:", error);
-        });        
-    }
-    else {
-        console.log("User Logged out!!!!")
-    }
-});
 const itm_lst = document.querySelector(".item-list")
 
 function enrollList(doc) {
@@ -62,3 +28,37 @@ function enrollList(doc) {
 
     itm_lst.appendChild(li)
 }
+
+auth.onAuthStateChanged(user => {
+    if (user) {
+        const uid = user.uid;
+        console.log(user.uid);
+        var actref = db.collection("activity");
+        var userref = db.collection("users").doc(uid);
+        userref.get().then(function (doc) {
+            if (doc.exists) {
+                console.log("loading list..")
+                doc.data().enrolled.forEach(element => {
+                    // console.log(element);
+                    actref.doc(element).get().then(function (page) {
+                        if (page.exists) {
+                            enrollList(page);
+                        }
+                        else {
+                            console.log("No act!!!");
+                        }
+                    })
+                });
+                console.log("list loaded")
+            }
+            else {
+                console.log("No such doc!!!");
+            }
+        }).catch(function (error) {
+            console.log("Error getting document:", error);
+        });
+    }
+    else {
+        console.log("User Logged out!!!!")
+    }
+});

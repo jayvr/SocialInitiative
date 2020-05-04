@@ -54,22 +54,19 @@ act.get().then(snap => {
 })
 
 //function behind the enroll button
-function onEnroll(btn)
-{
+function onEnroll(btn) {
     auth.onAuthStateChanged(user => {
-        console.log(btn.id);
-        console.log(user.uid);
+        // console.log(btn.id);
+        // console.log(user.uid);
         enrl_doc = btn.id;
-        if (user)
-        {
-           var userref = db.collection("users").doc(user.uid);
-           userref.update({
-               enrolled : firebase.firestore.FieldValue.arrayUnion(enrl_doc)
-           });
+        if (user) {
+            var userref = db.collection("users").doc(user.uid);
+            userref.update({
+                enrolled: firebase.firestore.FieldValue.arrayUnion(enrl_doc)
+            });
 
         }
-        else
-        {
+        else {
             console.log("Please login to Enter!!");
         }
     })
