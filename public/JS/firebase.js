@@ -47,7 +47,6 @@ function addList(doc) {
 act.get().then(snap => {
     console.log("fetching activities..")
     snap.docs.forEach(doc => {
-        console.log(doc.data())
         addList(doc)
     })
     console.log("done..")
