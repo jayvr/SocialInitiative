@@ -43,14 +43,6 @@ function addList(doc) {
     itm_lst.appendChild(li)
 }
 
-// getting activities from firestore
-act.get().then(snap => {
-    console.log("fetching activities..")
-    snap.docs.forEach(doc => {
-        addList(doc)
-    })
-    console.log("done..")
-})
 
 //function behind the enroll button
 function onEnroll(btn) {
@@ -71,3 +63,21 @@ function onEnroll(btn) {
     })
 }
 
+// getting activities from firestore
+act.get().then(snap => {
+    console.log("fetching activities..")
+    snap.docs.forEach(doc => {
+        addList(doc)
+    })
+    console.log("done..")
+})
+
+
+// // toggle make when user logged in
+// auth.onAuthStateChanged(user => {
+//     if (user) {
+//         mk.classList.remove("hidden")
+//     } else {
+//         mk.classList.add("hidden")
+//     }
+// })

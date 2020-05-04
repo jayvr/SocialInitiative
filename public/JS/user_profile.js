@@ -32,14 +32,12 @@ function enrollList(doc) {
 auth.onAuthStateChanged(user => {
     if (user) {
         const uid = user.uid;
-        console.log(user.uid);
         var actref = db.collection("activity");
         var userref = db.collection("users").doc(uid);
         userref.get().then(function (doc) {
             if (doc.exists) {
                 console.log("loading list..")
                 doc.data().enrolled.forEach(element => {
-                    // console.log(element);
                     actref.doc(element).get().then(function (page) {
                         if (page.exists) {
                             enrollList(page);

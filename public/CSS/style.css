@@ -63,7 +63,7 @@ nav a.active {
 
 /* to makae any element hidden */
 .hidden {
-  display: hidden;
+  display: none;
 }
 
 .item-list {
