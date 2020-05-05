@@ -24,7 +24,7 @@ auth.onAuthStateChanged(cur_user => {
                 console.log("sucessfuly updated in activity collection")
 
                 // id of activity
-                act_doc = "/activity/" + actRef.id
+                act_doc = actRef.id
                 // update user field to connect activity (add id in array)
 
                 console.log("updating activity in user")

@@ -33,14 +33,21 @@ auth.onAuthStateChanged(user => {
     if (user) {
         const uid = user.uid;
         var actref = db.collection("activity");
-        console.log(uid)
-        //var userref = db.collection("users").doc(uid);
-        actref.where("author","==",uid).get().then(function (doc) {
-            
+        //console.log(uid)
+        var userref = db.collection("users").doc(uid);
+        userref.get().then(function (doc) {
             if (doc.exists) {
                 console.log("loading list..")
-                doc.data().forEach(element => {
-                    console.log(element.data());
+                console.log(doc.data().activities)
+                doc.data().activities.forEach(element => {
+                    actref.doc(element).get().then(function (page) {
+                        if (page.exists) {
+                            enrollList(page);
+                        }
+                        else {
+                            console.log("No act!!!");
+                        }
+                    })
                 });
                 console.log("list loaded")
             }
