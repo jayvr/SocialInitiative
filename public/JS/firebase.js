@@ -71,13 +71,3 @@ act.get().then(snap => {
     })
     console.log("done..")
 })
-
-
-// // toggle make when user logged in
-// auth.onAuthStateChanged(user => {
-//     if (user) {
-//         mk.classList.remove("hidden")
-//     } else {
-//         mk.classList.add("hidden")
-//     }
-// })
