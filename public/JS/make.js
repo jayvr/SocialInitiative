@@ -13,7 +13,7 @@ auth.onAuthStateChanged(cur_user => {
             console.log("making new activity..")
 
             // get the uid of user
-            auth_doc = "/users/" + cur_user.uid
+            auth_doc = cur_user.uid
             // add the new activity
             act.add({
                 title: title.value,
