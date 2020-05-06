@@ -140,12 +140,8 @@ footer ul {
   background-color: grey;
   color: white;
   padding: 1.2rem;
-  /* position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0; */
   display: grid;
-  grid-template-columns: 75% auto auto auto;
+  grid-template-columns: 95% auto;
   list-style: none;
 }
 footer {

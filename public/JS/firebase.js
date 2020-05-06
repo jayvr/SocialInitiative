@@ -9,7 +9,7 @@ function addList(doc) {
     const dv = document.createElement("div")
     const title = document.createElement("span")
     const author = document.createElement("span")
-    const desc = document.createElement("div")
+    const desc = document.createElement("pre")
 
 
     li.setAttribute("doc-id", doc.id)
