@@ -47,6 +47,7 @@ textarea {
   display: block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  border-radius: 0.3rem;
 }
 
 input:hover,
@@ -67,19 +68,21 @@ textarea {
 }
 
 input[type="button"] {
-  background-color: #2ecc71;
-  color: rgb(92, 92, 92);
+  background-color: #3b4efd;
+  /* color: rgb(92, 92, 92); */
+  color: wheat;
   padding: 14px 20px;
   margin: auto;
   border: none;
   cursor: pointer;
   width: var(--width);
   display: block;
+  border-radius: 0.3rem;
 }
 
 input[type="button"]:hover {
   cursor: pointer;
-  background-color: #2ecc80;
+  background-color: #2c3abd;
 }
 
 /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */

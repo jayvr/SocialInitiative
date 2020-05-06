@@ -87,6 +87,11 @@ auth.onAuthStateChanged(user => {
                 console.log("See ya again")
             })
         })
+
+        profileContain.addEventListener("mouseleave", () => {
+            profile.classList.remove("hidden")
+            profileContain.classList.add("hidden")
+        })
     }
     else {
         STATUS = false
