@@ -11,9 +11,11 @@
 </head>
 
 <body>
+    <!-- Header -->
     <div class="header">
         <header><a href="index.html">Social Initiative</a></header>
-        <nav>
+        <!-- NavBar -->
+        <nav id="nav">
             <ul id="nav-list">
                 <li class="home"><a href="index.html">Home</a></li>
                 <li class="make active"><a href="newActivity.html">Make</a></li>
@@ -21,6 +23,8 @@
             </ul>
         </nav>
     </div>
+
+    <!-- Make a new activity form -->
     <div class="container">
 
         <div id="content-head">Make an Activity</div>
@@ -35,12 +39,16 @@
         <br>
         <input type="button" value="MAKE IT!" id="make-it">
     </div>
+
+    <!-- Footer -->
     <footer>
         <ul>
             <li class="copy">copyright &copy;</li>
             <li class="aboutUs"><a href="#">About Us</a></li>
         </ul>
     </footer>
+
+    <!-- Firebase Scripts -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
@@ -69,7 +77,7 @@
         // db.settings({ timestampsInSnapshots : true });
     </script>
 </body>
-
+<!-- Non-Firebase scripts -->
 <script src="JS/User_state.js"></script>
 <script src="JS/make.js"></script>
 

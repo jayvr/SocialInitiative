@@ -38,7 +38,7 @@ auth.onAuthStateChanged(user => {
         userref.get().then(function (doc) {
             if (doc.exists) {
                 console.log("loading list..")
-               // console.log(doc.data().activities)
+                // console.log(doc.data().activities)
                 doc.data().activities.forEach(element => {
                     actref.doc(element).get().then(function (page) {
                         if (page.exists) {

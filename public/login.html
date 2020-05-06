@@ -11,9 +11,11 @@
 </head>
 
 <body>
+    <!-- Header -->
     <div class="header">
         <header><a href="index.html">Social Initiative</a></header>
-        <nav>
+        <!-- NavBar -->
+        <nav id="nav">
             <ul>
                 <li class="home"><a href="index.html">Home</a></li>
                 <li class="make"><a href="newActivity.html">Make</a></li>
@@ -22,7 +24,7 @@
         </nav>
     </div>
 
-
+    <!-- Login Form -->
     <div class="container">
 
         <div id="content-head">Log in</div>
@@ -40,6 +42,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer>
         <ul>
             <li class="copy">copyright &copy;</li>
@@ -47,9 +50,7 @@
         </ul>
     </footer>
 
-
-
-
+    <!-- firebase Scripts -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
@@ -77,6 +78,7 @@
         // update firestore settings
         //db.settings({ timestampsInSnapshots : true });
     </script>
+    <!-- Non-Firebase Scripts -->
     <script src="JS/auth_login.js"></script>
     <script src="JS/User_state.js"></script>
 

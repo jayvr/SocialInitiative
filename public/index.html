@@ -10,8 +10,11 @@
 </head>
 
 <body>
+
+    <!-- Header -->
     <div class="header">
         <header><a href="index.html">Social Initiative</a></header>
+        <!-- NavBar -->
         <nav id="nav">
             <ul id="nav-list">
                 <li class="home active"><a href="index.html">Home</a></li>
@@ -21,16 +24,20 @@
         </nav>
     </div>
 
+    <!-- Content Section -->
     <div class="item-list">
+        <!-- this is where the activities will displayed -->
     </div>
+
+    <!-- Footer -->
     <footer style="position: relative;" class="footer">
         <ul>
             <li class="copy">copyright &copy;</li>
             <li class="aboutUs"><a href="#">About Us</a></li>
-            <li class="logout"><a href="logout.html">Logout</a></li>
-            <li class="logout"><a href="user_profile.html">Profile</a></li>
         </ul>
     </footer>
+
+    <!-- Firebase Script -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
@@ -58,6 +65,8 @@
         // update firestore settings
         // db.settings({ timestampsInSnapshots : true });
     </script>
+
+    <!-- Non-Firebase Scripts -->
     <script src="JS/User_state.js"></script>
     <script src="JS/firebase.js"></script>
     <!--<script src="JS/user_profile.js"></script>-->

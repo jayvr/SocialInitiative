@@ -11,9 +11,12 @@
 </head>
 
 <body>
+
+    <!-- Header -->
     <div class="header">
         <header><a href="index.html">Social Initiative</a></header>
-        <nav>
+        <!-- navBar -->
+        <nav id="nav">
             <ul id="nav-list">
                 <li class="home"><a href="index.html">Home</a></li>
                 <li class="make active"><a href="created.html">Created</a></li>
@@ -21,9 +24,14 @@
             </ul>
         </nav>
     </div>
+
+    <!-- Content Section -->
     <div class="item-list">
         <div id="content-head">Enrolled activity</div>
+        <!-- This is where user's enrolled activity will gwt displayed -->
     </div>
+
+    <!-- Footer -->
     <footer>
         <ul>
             <li class="copy">copyright &copy;</li>
@@ -31,6 +39,8 @@
             <li class="logout"><a href="logout.html">Logout</a></li>
         </ul>
     </footer>
+
+    <!-- Firebase Scripts -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
@@ -58,7 +68,10 @@
         // update firestore settings
         // db.settings({ timestampsInSnapshots : true });
     </script>
-    <script src="JS/user_profile.js"></script>
+
+    <!-- Non-Firebase Scripts -->
+    <script src="JS/User_state.js"></script>
+    <script src="JS/enrolled.js"></script>
 </body>
 
 </html>

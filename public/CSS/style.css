@@ -33,12 +33,23 @@ a {
 header > a {
   color: black;
 }
-nav ul {
+nav > ul {
   font-size: 1rem;
   display: grid;
   vertical-align: middle;
   grid-template-columns: auto auto auto;
   list-style: none;
+}
+
+.profile-container {
+  background-color: gray;
+  padding: 0.5rem;
+  z-index: 1;
+  position: absolute;
+  right: 2%;
+  top: 1.5%;
+  list-style: none;
+  grid-column: 3 / span 1;
 }
 
 /* Add a background color on mouse-over */

@@ -11,9 +11,11 @@
 </head>
 
 <body>
+    <!-- Header -->
     <div class="header">
         <header><a href="index.html">Social Initiative</a></header>
-        <nav>
+        <!-- NavBar -->
+        <nav id="nav">
             <ul id="nav-list">
                 <li class="home"><a href="index.html">Home</a></li>
                 <li class="make active"><a href="user_profile.html">Enrolled</a></li>
@@ -21,9 +23,14 @@
             </ul>
         </nav>
     </div>
+
+    <!-- Content section -->
     <div class="item-list">
         <div id="content-head">Created activity</div>
+        <!-- this is where user's created activity will get displayed -->
     </div>
+
+    <!-- Footer -->
     <footer>
         <ul>
             <li class="copy">copyright &copy;</li>
@@ -31,6 +38,8 @@
             <li class="logout"><a href="logout.html">Logout</a></li>
         </ul>
     </footer>
+
+    <!-- Firebase Scripts -->
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
@@ -58,6 +67,8 @@
         // update firestore settings
         // db.settings({ timestampsInSnapshots : true });
     </script>
+    <!-- Non-Firebase Scripts -->
+    <script src="JS/User_state.js"></script>
     <script src="JS/created.js"></script>
 </body>
 
