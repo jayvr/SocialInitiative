@@ -7,7 +7,7 @@
 
 body {
   height: 100%;
-  background-color: #EDF5E1;
+  background-color: #edf5e1;
 }
 
 a {
@@ -21,9 +21,13 @@ a {
   grid-template-columns: 75% auto;
   font-size: 1.5rem;
   vertical-align: middle;
-  background-image: linear-gradient( 135deg, #0E5CAD 10%, #79F1A4 100%);
+  background-image: linear-gradient(135deg, #0e5cad 10%, #79f1a4 100%);
   position: sticky;
   top: 0;
+}
+
+#logo {
+  margin-left: 3rem;
 }
 
 header > a {
@@ -31,9 +35,10 @@ header > a {
 }
 nav > ul {
   font-size: 1rem;
+  padding: 1rem;
   display: grid;
   vertical-align: middle;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 30%);
   list-style: none;
 }
 
@@ -56,7 +61,6 @@ nav > ul {
 
 /* Add a background color on mouse-over */
 nav a:hover {
-  
   color: rgb(71, 71, 71);
   transform: scale(1.05);
   transition: all 0.3s ease-in-out;
@@ -71,8 +75,8 @@ nav a.active {
 .active {
   color: rgb(27, 255, 76);
   text-decoration: underline;
-  transform: scale(1.25);
-  font-weight: bold;
+  transform: scale(1.2);
+  font-style: italic;
 }
 
 /* to makae any element hidden */
@@ -142,7 +146,7 @@ footer ul {
   color: white;
   padding: 1.2rem;
   display: grid;
-  grid-template-columns: 95% auto;
+  grid-template-columns: 90% auto;
   list-style: none;
 }
 footer {
