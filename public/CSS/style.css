@@ -33,6 +33,7 @@ a {
 header > a {
   color: black;
 }
+
 nav > ul {
   font-size: 1rem;
   padding: 1rem;
@@ -42,6 +43,10 @@ nav > ul {
   list-style: none;
 }
 
+nav i {
+  padding: 5px;
+}
+
 .profile-container {
   background-color: #ffffff;
   padding: 1rem 2rem;
@@ -49,21 +54,32 @@ nav > ul {
   z-index: 1;
   position: absolute;
   right: 3rem;
-  top: 0rem;
+  top: 5rem;
   list-style: none;
   grid-column: 3 / span 1;
   transition: all 1s ease-in-out;
   border-radius: 0.5rem;
-}
-.profile-container {
   line-height: 2em;
+}
+
+.profile-container span {
+  padding: 2.2px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.profile-container a:hover {
+  color: black;
+  transform: scale(1.05);
+  transition: all 0.1s ease-in-out;
 }
 
 /* Add a background color on mouse-over */
 nav a:hover {
-  color: rgb(71, 71, 71);
+  color: white;
   transform: scale(1.05);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 /* Style the current/active link */

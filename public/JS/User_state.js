@@ -6,11 +6,14 @@ let STATUS
 
 function makeProfile() {
     console.log("creating profile")
+
     profileDiv = document.createElement("li")
     profileDiv.setAttribute("class", "profile")
+
     profileLink = document.createElement("a")
     profileLink.setAttribute("href", "#")
-    profileLink.textContent = "Profile"
+    profileLink.innerHTML = "<i class=\"fas fa-user\"></i> Profile"
+
     profileDiv.appendChild(profileLink)
     navList.appendChild(profileDiv)
 }
@@ -18,7 +21,7 @@ function makeProfileContainer(uname, hide = '') {
     profileContainer = document.createElement("ul")
     profileContainer.setAttribute("class", "profile-container " + hide)
 
-    profileDiv = document.createElement("li")
+    profileDiv = document.createElement("span")
     profileDiv.setAttribute("class", "user-profile")
     profileLink = document.createElement("a")
     profileLink.setAttribute("href", "profile.html")
@@ -39,17 +42,17 @@ function makeProfileContainer(uname, hide = '') {
     createdLink.textContent = "created"
     createdDiv.appendChild(createdLink)
 
-    logoutDiv = document.createElement("li")
+    logoutDiv = document.createElement("span")
     logoutDiv.setAttribute("class", "logout")
     logoutLink = document.createElement("a")
     logoutLink.setAttribute("href", "index.html")
-    logoutLink.textContent = "logout"
+    logoutLink.innerHTML = "<i class=\"fas fa-sign-out-alt\"></i>"
     logoutDiv.appendChild(logoutLink)
 
     profileContainer.appendChild(profileDiv)
+    profileContainer.appendChild(logoutDiv)
     profileContainer.appendChild(enrolledDiv)
     profileContainer.appendChild(createdLink)
-    profileContainer.appendChild(logoutDiv)
 
     navList.appendChild(profileContainer)
 
@@ -74,8 +77,11 @@ auth.onAuthStateChanged(user => {
         profileContain = document.querySelector(".profile-container")
 
         profile.addEventListener("click", () => {
-            profile.classList.add("hidden")
-            profileContain.classList.remove("hidden")
+            if (profileContain.classList.contains("hidden")) {
+                profileContain.classList.remove("hidden")
+            } else {
+                profileContain.classList.add("hidden")
+            }
         })
 
         logoutBtn = document.querySelector(".logout")
