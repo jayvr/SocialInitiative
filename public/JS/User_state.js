@@ -12,7 +12,9 @@ function makeProfile() {
 
     profileLink = document.createElement("a")
     profileLink.setAttribute("href", "#")
-    profileLink.innerHTML = "<i class=\"fas fa-user\"></i> Profile"
+    profileLink.setAttribute("class", "tooltip tooltip-bottom")
+    profileLink.setAttribute("data-tooltip", "Profile")
+    profileLink.innerHTML = "<i class=\"fas fa-user\"></i>"
 
     profileDiv.appendChild(profileLink)
     navList.appendChild(profileDiv)
@@ -46,6 +48,8 @@ function makeProfileContainer(uname, hide = '') {
     logoutDiv.setAttribute("class", "logout")
     logoutLink = document.createElement("a")
     logoutLink.setAttribute("href", "index.html")
+    logoutLink.setAttribute("class", "tooltip tooltip-right")
+    logoutLink.setAttribute("data-tooltip", "Logout")
     logoutLink.innerHTML = "<i class=\"fas fa-sign-out-alt\"></i>"
     logoutDiv.appendChild(logoutLink)
 
@@ -106,3 +110,5 @@ auth.onAuthStateChanged(user => {
         loginBtn.classList.remove("hidden")
     }
 });
+
+

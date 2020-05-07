@@ -43,10 +43,9 @@ nav > ul {
   list-style: none;
 }
 
-nav i {
-  padding: 5px;
+#nav i {
+  padding: 1rem;
 }
-
 .profile-container {
   background-color: #ffffff;
   padding: 1rem 2rem;
@@ -62,11 +61,10 @@ nav i {
   line-height: 2em;
 }
 
-.profile-container span {
-  padding: 2.2px;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: space-around;
+.profile-container span,
+.profile-container i {
+  padding: 2px;
+  display: inline;
 }
 
 .profile-container a:hover {
@@ -100,6 +98,41 @@ nav a.active {
   display: none;
 }
 
+/* Some basic styling to notify users about the tooltips*/
+.tooltip {
+  text-decoration: none;
+}
+
+.tooltip:hover {
+  color: white;
+  position: relative;
+}
+
+/* Tooltip on Bottom */
+.tooltip-bottom[data-tooltip]:hover:after {
+  content: attr(data-tooltip);
+  padding: 2px 4px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  /* white-space: nowrap; */
+  z-index: 20px;
+  background-color: rgba(0, 0, 0, 0.178);
+  color: #fff;
+  transition: all 1s ease-in-out;
+}
+
+/* Tooltip on Right */
+.tooltip-right[data-tooltip]:hover:after {
+  content: attr(data-tooltip);
+  padding: 2px 4px;
+  position: absolute;
+  left: 100%;
+  white-space: nowrap;
+  z-index: 20px;
+  background-color: rgba(0, 0, 0, 0.178);
+  color: #fff;
+}
 .item-list {
   padding: 0.5rem;
   margin: auto;
