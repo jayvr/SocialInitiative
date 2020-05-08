@@ -9,7 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/103d91f1f3.js" crossorigin="anonymous"></script>
 
-    <title>login | Social Initiative</title>
+    <title>Forget Password | Social Initiative</title>
 </head>
 
 <body>
@@ -29,24 +29,15 @@
             </ul>
         </nav>
     </div>
-    <div class="below-header"></div>
+
     <!-- Login Form -->
     <div class="container">
 
         <div id="content-head">Log in</div>
         <label for="email">email</label>
         <input type="email" name="email" id="email" placeholder="john.doe@email.xyz" required>
-
-        <label for="password">password</label>
-        <input type="password" name="password" id="password" placeholder="password here" required>
-
         <br>
-        <input type="button" value="Log In" id="login_btn">
-        <div class="oops">
-            Don't have an account?
-            <a href="register.html">sign up!</a>
-            <div><a href="forget.html">forget password?.</a></div>
-        </div>
+        <input type="button" value="Reset Password" id="forget_btn">
     </div>
 
     <!-- Footer -->
@@ -86,7 +77,7 @@
         //db.settings({ timestampsInSnapshots : true });
     </script>
     <!-- Non-Firebase Scripts -->
-    <script src="JS/auth_login.js"></script>
+    <script src="JS/forget.js"></script>
     <script src="JS/User_state.js"></script>
 
 

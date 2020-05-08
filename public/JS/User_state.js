@@ -48,7 +48,7 @@ function makeProfileContainer(uname, hide = '') {
     logoutDiv.setAttribute("class", "logout")
     logoutLink = document.createElement("a")
     logoutLink.setAttribute("href", "index.html")
-    logoutLink.setAttribute("class", "tooltip tooltip-right")
+    logoutLink.setAttribute("class", "tooltip tooltip-top")
     logoutLink.setAttribute("data-tooltip", "Logout")
     logoutLink.innerHTML = "<i class=\"fas fa-sign-out-alt\"></i>"
     logoutDiv.appendChild(logoutLink)
