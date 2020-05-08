@@ -20,23 +20,16 @@ a {
   grid-template-columns: 75% auto;
   font-size: 1.5rem;
   vertical-align: middle;
-  background-image: linear-gradient(135deg, #0e5cad 10%, #79f1a4 100%);
+  background-color: #FFFFFF;
+  background-image: linear-gradient(100deg, #6284FF 50%, #FF0000 100%);
+
+  /* background: red; */
+  /* background-image: linear-gradient(135deg, #0e5cad 10%, #79f1a4 100%); */
   position: sticky;
   top: 0;
   /* clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0); */
 }
-.below-header {
-  position: fixed;
-  top: 100px;
-  right: 0;
-  left: 0;
-  padding: 1rem;
-  margin-bottom: 1em;
-  padding-bottom: 10rem;
-  clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
-  background-image: linear-gradient(135deg, #0e5cad 10%, #79f1a4 100%);
-  z-index: -1;
-}
+
 
 #logo {
   margin-left: 3rem;
