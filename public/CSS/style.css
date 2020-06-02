@@ -21,7 +21,11 @@ a {
   font-size: 1.5rem;
   vertical-align: middle;
   background-color: #FFFFFF;
-  background-image: linear-gradient(100deg, #6284FF 50%, #FF0000 100%);
+  /*background-image: linear-gradient(100deg, #6284FF 50%, #FF0000 100%);*/
+  background: #22c1c3;  /* fallback for old browsers */
+
+  background: linear-gradient(to left, #fdbb2d, #22c1c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
   /* background: red; */
   /* background-image: linear-gradient(135deg, #0e5cad 10%, #79f1a4 100%); */
